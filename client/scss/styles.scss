@@ -1,0 +1,71 @@
+/*
+---- VARIABLES -----
+*/
+
+// Colours:
+
+$bbc-news-main: #b81616;
+// ... other core colours would go here for reusability and consistency
+
+// Typography:
+
+$title-font-weight: 600;
+$title-font-size: 3rem;
+
+/*
+---- STYLING -----
+*/
+
+body {
+  background-color: transparent;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bbc-news-tv-graphics {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+
+  &__upper-third {
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+  }
+
+  &__lower-third {
+    background-color: $bbc-news-main;
+    width: 100vw;
+    margin-bottom: 0.8rem;
+    order: 0;
+    align-self: auto;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .strapline-logo {
+    display: flex;
+    padding-right: 5rem;
+  }
+
+  .bbc-logo {
+    align-self: center;
+  }
+
+  h2.bbc-news__title {
+    text-transform: uppercase;
+  }
+
+  h2,
+  p {
+    color: white;
+    font-size: $title-font-size;
+    font-weight: $title-font-weight;
+    align-self: center;
+  }
+}
