@@ -1,0 +1,55 @@
+/*
+---- VARIABLES -----
+*/
+/*
+---- STYLING -----
+*/
+body {
+  background-color: transparent;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bbc-news-tv-graphics {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+}
+.bbc-news-tv-graphics__upper-third {
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-self: auto;
+}
+.bbc-news-tv-graphics__lower-third {
+  background-color: #b81616;
+  width: 100vw;
+  margin-bottom: 0.8rem;
+  order: 0;
+  align-self: auto;
+  overflow: hidden;
+  display: flex;
+}
+.bbc-news-tv-graphics .strapline-logo {
+  display: flex;
+  padding-right: 5rem;
+}
+.bbc-news-tv-graphics .bbc-logo {
+  align-self: center;
+}
+.bbc-news-tv-graphics h2.bbc-news__title {
+  text-transform: uppercase;
+}
+.bbc-news-tv-graphics h2,
+.bbc-news-tv-graphics p {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  align-self: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
