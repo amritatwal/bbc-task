@@ -1,2 +1,2 @@
 # bbc-task
-Technical assessment - News Clock
+News Clock
