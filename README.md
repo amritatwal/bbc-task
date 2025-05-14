@@ -40,9 +40,3 @@ Run `yarn start-server`
   - accuracy 
    
 - Understanding how CasparCG works. I enjoyed familiarising myself with a new piece of software. I picked up what I needed to understand how to fulfill the requirements. I'd go beyond achieveing a surface-level of understanding and return back to the CasparCG Wiki e.g. learn more about producers and consumers.  
-
-<!-- - Your work will be evaluated against four key criteria:
-  - Design, Modularisation and Componentisation
-  - Testing Approach and Scenarios
-  - Performance
-  - Style and Readability -->
