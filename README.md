@@ -10,7 +10,8 @@ The work is unfinished but left some thoughts here and in the form of code comme
 ## How to run
 
 1. Clone the repository
-2. Open a terminal and run `nc -l -p 5250` to simulate connection to a CasparCG server
+2. Run `npm install` 
+3. Open a terminal and run `nc -l -p 5250` to simulate connection to a CasparCG server
 
 ### Launching the web client
 
