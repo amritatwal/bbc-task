@@ -18,6 +18,7 @@ export class Scheduler {
   }
 
   start() {
+    console.info('Starting the scheduler...')
     this.callback()
     this.intervalId = setInterval(this.callback, 60000)
     return

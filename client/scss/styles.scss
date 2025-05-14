@@ -16,6 +16,8 @@ $title-font-size: 3rem;
 ---- STYLING -----
 */
 
+// TODO: address responsiveness. Although the content wraps on smaller screens, the content should still scale for all viewport sizes (beyond 1920×1080)
+
 body {
   background-color: transparent;
   display: flex;
@@ -46,6 +48,7 @@ body {
     align-self: auto;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap;
   }
 
   .strapline-logo {
@@ -69,3 +72,4 @@ body {
     align-self: center;
   }
 }
+

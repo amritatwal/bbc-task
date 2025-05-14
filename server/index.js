@@ -1,11 +1,11 @@
 import { CasparCG } from 'casparcg-connection'
-import { Scheduler, getCurrentTime } from './lib/helpers'
+import { Scheduler, getCurrentTime } from './lib/helpers.js'
 
 // The INVOKE command can call (I assume based on what I've read) any custom function
 // For maintainability, custom functions passed into invoke() could be compiled in a package / module.
 // These would be imported below for use in this API.
 
-class CasparCG {
+class CasparCGAPI {
   constructor() {
     this.connection = new CasparCG({
       host: '127.0.0.1',
@@ -16,15 +16,16 @@ class CasparCG {
   async connect() {
     try {
       console.info('🏁 Connecting to the CasparCG server on port 5250...')
+
       const time = getCurrentTime()
+      const scheduler = new Scheduler(() => {
+        this.invokeMethod('on', time)
+      })
 
-      const method = `leftTab('on', 'BBC NEWS HH:MM')`
-      const scheduler = new Scheduler(this.invokeMethod(method))
-
-      await connection.cgAdd({
+      await this.connection.cgAdd({
         channel: 1,
         layer: 1,
-        template: 'http://127.0.0.1:8080/client/html/html-lower-third.html',
+        template: 'http://127.0.0.1:8080/client/html/main.html',
         playOnLoad: 1,
       })
 
@@ -38,8 +39,13 @@ class CasparCG {
     }
   }
 
-  async invokeMethod(method) {
-    await this.connection.cgInvoke({
+  async invokeMethod(toggle, time) {
+    const method =
+      toggle === 'on'
+        ? `leftTab('on', 'BBC NEWS ${time}') \r\n`
+        : `leftTab('off') \r\n`
+
+    return this.connection.cgInvoke({
       channel: 1,
       layer: 1,
       cgLayer: 0,
@@ -54,6 +60,6 @@ class CasparCG {
   }
 }
 
-const casparCG = new CasparCG()
+const casparCG = new CasparCGAPI()
 
 await casparCG.connect()

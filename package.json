@@ -6,12 +6,12 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-web": "http-server -p8080 -c-1 && sass --watch scss:css"
+    "start-web": "http-server -p8080 -c-1 && sass --watch scss:css",
+    "start-server": "node ./server/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "casparcg-connection": "^6.3.0",
-    "express": "^5.1.0"
+    "casparcg-connection": "^6.3.0"
   }
 }

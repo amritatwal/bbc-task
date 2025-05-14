@@ -33,6 +33,7 @@ body {
   align-self: auto;
   overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
 }
 .bbc-news-tv-graphics .strapline-logo {
   display: flex;
